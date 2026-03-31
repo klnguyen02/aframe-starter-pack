@@ -6,13 +6,36 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0.1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <!-- <a-sky color="#ECECEC"></a-sky> -->
+      <!--<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box> -->
+      <!-- body -->
+      <a-sphere position="0 .75 -4" radius="1" color="#white"></a-sphere>
+      <a-sphere position="0 2.15 -4" radius=".75" color="#white"></a-sphere>
+      <a-sphere position="0 3.15 -4" radius=".5" color="#white"></a-sphere>
+      
+      <!-- nose -->
+      <a-cone position="0 3.15 -3.3" rotation="90 0 0" radius-top="0.007" radius-bottom="0.05" height="0.5" color="#FFC65D"></a-cone>     <!-- <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+      
+       <!-- eyes  -->
+      <a-sphere position="0.25 3.3 -3.7" radius="0.10" color="#000"></a-sphere>
+      <a-sphere position="-0.25 3.3 -3.7" radius="0.10" color="#000"></a-sphere>
+
+      <!-- blush -->
+      <a-sphere position="0.10 3.02 -3.58" radius="0.07" color="#fcbacb"></a-sphere>
+      <a-sphere position="0 3.02 -3.58" radius="0.07" color="#fcbacb"></a-sphere>
+      <a-sphere position="-0.10 3.02 -3.58" radius="0.07" color="#fcbacb"></a-sphere>
+
+       <!-- arms  -->
+      <a-cylinder position="-0.9 2.15 -4.5" radius="0.03" height="1.2" rotation="0 0 60" color="#8B5A2B"> </a-cylinder>
+      <a-cylinder position="0.9 2.15 -4.5" radius="0.03" height="1.2" rotation="0 0 -60" color="#8B5A2B"> </a-cylinder>
+
+      <!--  buttons -->
+      <a-sphere position="0 1.8 -3" radius="0.10" color="#000"></a-sphere>
+      <a-sphere position="0 2.15 -3" radius="0.10" color="#000"></a-sphere>
+      <a-sphere position="0 2.5 -3" radius="0.10" color="#000"></a-sphere>
+     
+      <!-- <a-plane position="0 0.1 -4" rotation="-90 0 0" width="4" height="4" color="#white"></a-plane> -->
       <!-- the enviroment entity includes a sky. Choose from the presets"none, default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris, moon" -->
-      <a-entity environment="preset: threetowers; dressingAmount: 500"></a-entity>
+      <a-entity environment="preset: yavapai; dressingAmount: 500"></a-entity>
     </a-scene>
   </body>
 </html>
