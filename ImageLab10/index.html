@@ -6,25 +6,25 @@
   <body>
     <a-scene>
         <a-assets>
-        <img id="sky1" src="assets/41853489355_978db42d4c_k.jpeg">
-        <img id="ball" src="assets/ball.png">
+        <img id="sky1" src="assets/beach.jpeg">
+        <img id="ball" src="assets/sand.png">
         <img id="towel" src="assets/towel.png">
         <img id="umberella" src="assets/umberella.png">
-        <img id="tex4" src="assets/texture4.jpg">
-        <img id="plane" src="assets/plane.jpg">
+        <img id="wood" src="assets/wood.png">
       </a-assets>
 
+      <!-- sky  -->
       <a-sky src="#sky1" radius="30"></a-sky>
 
     <!-- beach ball  -->
-      <a-sphere src="#ball" position="0 0.5a -5" radius="0.5" color="#EF2D5E"></a-sphere>
+      <a-sphere src="#ball" position="0 0.5a -5" radius="0.5" ></a-sphere>
 
     <!-- umberella  -->
-      <a-cylinder position="-0 0.4 -3" radius="0.03" height="2" rotation="0 0 1200" color="#8B5A2B"></a-cylinder>
-      <a-cone src="#umberella" position="1 0.95 -3" rotation="0 0 120" radius-top="1" radius-bottom="0.05" height="0.5" color="#FFC65D"></a-cone>     <!-- <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+      <a-cylinder src="#wood" position="-0 0.4 -3" radius="0.03" height="2" rotation="0 0 1200"></a-cylinder>
+      <a-cone src="#umberella" position="1 0.95 -3" rotation="0 0 120" radius-top="1" radius-bottom="0.05" height="0.5" ></a-cone>     <!-- <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
     
       <!-- beach towel  -->
-      <a-plane src="#towel" position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-plane src="#towel" position="0 0 -4" rotation="-90 0 0" width="4" height="4" ></a-plane>
       
     </a-scene>
   </body>
