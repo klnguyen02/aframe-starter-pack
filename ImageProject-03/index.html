@@ -5,11 +5,105 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
+      <a-entity sound="src: assets/audio.mp3 ; autoplay: true; loop: true; volume: 1"></a-entity>
+      <a-entity position="0 6 18"><a-camera wasd-controls look-controls></a-camera></a-entity>
+
+      <a-assets>
+        <img id="sky1" src="assets/sky1.jpg">
+      </a-assets>
+
+      <!-- sky  -->
+      <a-sky src="#sky1" radius="40"></a-sky>
+
+
+      <a-box src ="assets/gold.avif"  position="0 0.25 -4" width="8" height="1" depth="5" ></a-box>
+      
+      
+      <!-- Temple center -->
+      <a-cone src ="assets/blue.avif"  position="0 3.8 -4" radius-bottom="1.2" radius-top="0.05" height="6.7" ></a-cone>
+
+
+
+<!-- 3d models -->
+<a-entity
+  gltf-model="assets/barrel.glb"
+  position="2 0.5 -2.7"
+  scale="1 1 1">
+</a-entity>
+<a-entity
+  gltf-model="assets/barrel.glb"
+  position="-2 0.5 -2.7"
+  scale="1 1 1">
+</a-entity>
+<a-entity
+  gltf-model="assets/corkscrew.glb"
+  position="-3 7 -2.7"
+  rotation="180 0 0"
+  scale="9 9 9">
+</a-entity>
+<a-entity
+  gltf-model="assets/corkscrew.glb"
+  position="3 7 -2.7"
+  rotation="180 0 0"
+  scale="9 9 9">
+</a-entity>
+
+      <!--  outer white spikes -->
+      <a-cone src ="assets/stone.jpg" position="-1.6 3.2 -4" radius-bottom="1.1" radius-top="0.05" height="5.5" ></a-cone>
+      <a-cone src ="assets/stone.jpg" position="1.6 3.2 -4" radius-bottom="1.1" radius-top="0.05" height="5.5" ></a-cone>
+      <a-cone src ="assets/stone.jpg" position="-0.8 3.4 -4.3" radius-bottom="0.8" radius-top="0.05" height="5.8" ></a-cone>
+      <a-cone src ="assets/stone.jpg" position="0.8 3.4 -4.3" radius-bottom="0.8" radius-top="0.05" height="5.8"></a-cone>
+      <a-cone src ="assets/stone.jpg" position="0 3.1 -3.9" radius-bottom="0.7" radius-top="0.05" height="5.2"></a-cone>
+
+      <!-- Flower strips -->
+      <a-plane position="-5 0.02 -1" rotation="-90 20 25" width="4.5" height="0.35" color="#ff4d7d"></a-plane>
+      <a-plane position="-4 0.02 -4" rotation="-90 18 20" width="4" height="0.3" color="#f2c230"></a-plane>
+      <a-plane position="-3 0.02 -1" rotation="-90 10 12" width="4.2" height="0.3" color="#ff6fb5"></a-plane>
+
+      <a-plane position="4.8 0.02 -1" rotation="-90 -20 -25" width="4.5" height="0.35" color="#8f52ff"></a-plane>
+      <a-plane position="4 0.02 -4" rotation="-90 -18 -20" width="4" height="0.3" color="#ff5e57"></a-plane>
+
+      <!-- pathways to get to the weapons -->
+      <a-plane src = "assets/brown.jpg"  position="-1 0.02 -9.2" rotation="-90 8 8" width="2.8" height="0.25" ></a-plane>
+      <a-plane src =" assets/brown.jpg" position="1 0.02 -9.2" rotation="-90 -8 -8" width="2.8" height="0.25" ></a-plane>
+      <a-box src="assets/brown.jpg" position="0 0.31 -4" width="26" height="0.05" depth="0.8" rotation="0 0 0"></a-box>
+      <a-box src="assets/brown.jpg" position="0 0.31 -4" width="26" height="0.05" depth="0.8" rotation="0 45 0"></a-box>
+      <a-box src="assets/brown.jpg" position="0 0.31 -4" width="26" height="0.05" depth="0.8" rotation="0 90 0"></a-box>
+      <a-box src="assets/brown.jpg" position="0 0.31 -4" width="26" height="0.05" depth="0.8" rotation="0 135 0"></a-box>
+      <a-box src="assets/brown.jpg" position="0 0.31 -4" width="26" height="0.05" depth="0.8" rotation="0 180 0"></a-box>
+      <a-box src="assets/brown.jpg" position="0 0.31 -4" width="26" height="0.05" depth="0.8" rotation="0 225 0"></a-box>
+      <a-box src="assets/brown.jpg" position="0 0.31 -4" width="26" height="0.05" depth="0.8" rotation="0 270 0"></a-box>
+      <a-box src="assets/brown.jpg" position="0 0.31 -4" width="26" height="0.05" depth="0.8" rotation="0 315 0"></a-box>
+
+      <!-- circles for each of the tributes  -->
+      <a-cylinder src="assets/gray.jpg" position="13 0.34 -4" radius="1" height="1"></a-cylinder>
+      <a-cylinder src="assets/gray.jpg" position="9.19 0.34 -13.19" radius="1" height="1"></a-cylinder>
+      <a-cylinder src="assets/gray.jpg" position="0 0.34 -17" radius="1" height="1"></a-cylinder>
+      <a-cylinder src="assets/gray.jpg" position="-9.19 0.34 -13.19" radius="1" height="1"></a-cylinder>
+      <a-cylinder src="assets/gray.jpg" position="-13 0.34 -4" radius="1" height="1"></a-cylinder>
+      <a-cylinder src="assets/gray.jpg" position="-9.19 0.34 5.19" radius="1" height="1"></a-cylinder>
+      <a-cylinder src="assets/gray.jpg" position="0 0.34 9" radius="1" height="1"></a-cylinder>
+      <a-cylinder src="assets/gray.jpg" position="9.19 0.34 5.19" radius="1" height="1"></a-cylinder>
+
+
+
+      <a-text value="Welcome Tributes" position="0 8 -15" align="center" color="#000000" width="35" ></a-text>
+
+
+      <!-- rotate pcitures of tributes-->
+        <a-entity
+        position="0 0 -4"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 19000; easing: linear">   
+
+
+      <a-plane src="assets/katniss.jpg" position="0 15 -30" width="10" height="10" rotation="0 0 0"></a-plane>
+      <a-plane src="assets/finnick.jpg" position="21 15 -21" width="10" height="10" rotation="0 315 0"></a-plane>
+      <a-plane src="assets/beetee.jpg" position="30 15 0" width="10" height="10" rotation="0 270 0"></a-plane>
+      <a-plane src="assets/haymitch.webp" position="21 15 21" width="10" height="10" rotation="0 225 0"></a-plane>
+      <a-plane src="assets/lucygray.webp" position="0 15 30" width="10" height="10" rotation="0 180 0"></a-plane>
+      <a-plane src="assets/rue.webp" position="-21 15 21" width="10" height="10" rotation="0 135 0"></a-plane>
+      <a-plane src="assets/peeta.avif" position="-30 15 0" width="10" height="10" rotation="0 90 0"></a-plane>
+      <a-plane src="assets/ash.webp" position="-21 15 -21" width="10" height="10" rotation="0 45 0"></a-plane>
+
   </body>
 </html>
